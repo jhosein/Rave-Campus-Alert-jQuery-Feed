@@ -1,0 +1,10 @@
+//Developed by @JonathanHosein
+//jQuery Installation maybe necessary depending on your environment
+$.get('https://www.getrave.com/rss/tntech/channel3', function (data) { //get XML data from rave url
+    $(data).find("item").each(function () {
+        var el = $(this);
+		
+		$("#ttuAlert").text(el.find("description").text()); //prints description data to HTML element ttuAlert.
+        console.log(el.find("description").text()); //prints desc. to console for debugging purposes.
+    });
+});
