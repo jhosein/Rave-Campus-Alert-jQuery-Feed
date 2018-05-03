@@ -5,6 +5,6 @@ $.get('https://www.getrave.com/rss/tntech/channel3', function (data) { //get XML
         var el = $(this);
 		
 		$("#ttuAlert").text(el.find("description").text()); //prints description data to HTML element ttuAlert.
-        console.log(el.find("description").text()); //prints desc. to console for debugging purposes.
+        console.log(el.find("description").text());
     });
 });
